@@ -4,16 +4,16 @@
  * and open the template in the editor.
  */
 package modelo;
-
 /**
  *
  * @author 20162102326
  */
-public abstract class Veiculos {
+public abstract class Veiculos implements Interface{
 
     private int NumeroPassageiros;
     private double preco;
     private String proprietario, marca, modelo;
+    private Motor motor;
 
     public int getNumeroPassageiros() {
         return NumeroPassageiros;
@@ -55,4 +55,115 @@ public abstract class Veiculos {
         this.modelo = modelo;
     }
 
+    public Motor getMotor() {
+        return motor;
+    }
+
+    public void setMotor(Motor motor) {
+        this.motor = motor;
+    }
+    
+    public interface frear extends Interface{
+        public void frear();
+    }
+     
+    public interface virarDireita extends Interface{
+        public void virarDireita();
+    }
+    
+    public interface virarEsquerda extends Interface{
+        public void virarEsquerda();
+    }
+    
+    public void getTempoMaxUso(){
+        System.out.println("O tempo máximo de uso é: " + tempoMaxUso);
+    }
+    
+    public void getIdadeMinMotorista(){
+        System.out.println("A idade mínima do motorista é: "+idadeMinMotorista);
+    }
+
+    public Veiculos() {}
+
+    public Veiculos(int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor) {
+        this.NumeroPassageiros = NumeroPassageiros;
+        this.preco = preco;
+        this.proprietario = proprietario;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+    }
+    public Veiculos(int NumeroPassageiros, double preco, String proprietario, String marca, Motor motor, String modelo) {
+        this.NumeroPassageiros = NumeroPassageiros;
+        this.preco = preco;
+        this.proprietario = proprietario;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+    }
+    public Veiculos(int NumeroPassageiros, String proprietario, String marca, double preco, String modelo, Motor motor) {
+        this.NumeroPassageiros = NumeroPassageiros;
+        this.preco = preco;
+        this.proprietario = proprietario;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+    }
+    public Veiculos(int NumeroPassageiros, String modelo, double preco, String proprietario, String marca, Motor motor) {
+        this.NumeroPassageiros = NumeroPassageiros;
+        this.preco = preco;
+        this.proprietario = proprietario;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+    }
+    public Veiculos(int NumeroPassageiros, String proprietario, String marca, String modelo, double preco, Motor motor) {
+        this.NumeroPassageiros = NumeroPassageiros;
+        this.preco = preco;
+        this.proprietario = proprietario;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+    }
+    public Veiculos(int NumeroPassageiros, String proprietario, String marca, String modelo, Motor motor, double preco) {
+        this.NumeroPassageiros = NumeroPassageiros;
+        this.preco = preco;
+        this.proprietario = proprietario;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+    }
+    public Veiculos(double preco, int NumeroPassageiros,String proprietario, String marca, String modelo, Motor motor) {
+        this.NumeroPassageiros = NumeroPassageiros;
+        this.preco = preco;
+        this.proprietario = proprietario;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+    }
+    public Veiculos(double preco, String proprietario, int NumeroPassageiros, String marca, String modelo, Motor motor) {
+        this.NumeroPassageiros = NumeroPassageiros;
+        this.preco = preco;
+        this.proprietario = proprietario;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+    }
+    public Veiculos(double preco, String proprietario, String marca, String modelo, int NumeroPassageiros, Motor motor) {
+        this.NumeroPassageiros = NumeroPassageiros;
+        this.preco = preco;
+        this.proprietario = proprietario;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+    }
+    
+    public void cadastrar(int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor){
+        this.NumeroPassageiros = NumeroPassageiros;
+        this.preco = preco;
+        this.proprietario = proprietario;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.motor = motor;
+    }
 }
