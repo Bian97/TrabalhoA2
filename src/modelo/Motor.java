@@ -129,4 +129,8 @@ public class Motor {
         this.rpm = rpm;
         this.rpmMaximo = rpmMaximo;
     }
+    
+    public void imprimir(){
+        System.out.println("A marca é: "+marca+"\nO modelo é: "+modelo+"\nO tipo de combustível é: "+tipoCombustivel+"\nO RPM é: "+rpm+"\nRPM máximo é: "+rpmMaximo);
+    }
 }

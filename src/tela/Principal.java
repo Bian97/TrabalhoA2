@@ -6,15 +6,31 @@
 package tela;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import javax.swing.JOptionPane;
+import modelo.Carro;
+import modelo.Moto;
 import modelo.Motor;
+import modelo.Onibus;
 
 /**
  *
  * @author DrGreend
  */
 public class Principal extends javax.swing.JFrame {
-
+        int max = 2;
+        ArrayList<Motor> motor = new ArrayList<Motor>(max);
+        Motor mt = new Motor();
+        int pos = 0;
+        ArrayList<Carro> carro = new ArrayList<Carro>(max);
+        Carro cr = new Carro();
+        int posc = 0;
+        ArrayList<Moto> moto = new ArrayList<Moto>(max);
+        Moto mto = new Moto();
+        int posm = 0;
+        ArrayList<Onibus> onibus = new ArrayList<Onibus>(max);
+        Onibus oni = new Onibus();
+        int poso = 0;
     /**
      * Creates new form Principal
      */
@@ -55,11 +71,145 @@ public class Principal extends javax.swing.JFrame {
         BtnCons9 = new javax.swing.JButton();
         BtnCons5 = new javax.swing.JButton();
         BtnCons10 = new javax.swing.JButton();
+        BtnReiniciar = new javax.swing.JButton();
         BtnImprimir = new javax.swing.JButton();
+        jPanel4 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        BtnInserirC = new javax.swing.JButton();
+        TxtLimparC = new javax.swing.JButton();
+        BtnConsC2 = new javax.swing.JButton();
+        BtnConsC3 = new javax.swing.JButton();
+        BtnConsC4 = new javax.swing.JButton();
+        BtnConsC6 = new javax.swing.JButton();
+        BtnConsC8 = new javax.swing.JButton();
+        BtnConsC7 = new javax.swing.JButton();
+        BtnConsC9 = new javax.swing.JButton();
+        BtnConsC5 = new javax.swing.JButton();
+        BtnConsC10 = new javax.swing.JButton();
+        BtnReiniciarC = new javax.swing.JButton();
+        BtnImprimirC = new javax.swing.JButton();
+        BtnDesC = new javax.swing.JButton();
+        BtnAcelC1 = new javax.swing.JButton();
+        BtnEsqC = new javax.swing.JButton();
+        BtnDirC = new javax.swing.JButton();
+        BtnFrearC = new javax.swing.JButton();
+        PnlMotorC = new javax.swing.JPanel();
+        TxtCombusC = new javax.swing.JTextField();
+        jLabel10 = new javax.swing.JLabel();
+        TxtRpmMaxC = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        TxtRpmC = new javax.swing.JTextField();
+        jLabel8 = new javax.swing.JLabel();
+        TxtModeloC = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        TxtMarcaC = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        TxtPropC = new javax.swing.JTextField();
+        TxtNumC = new javax.swing.JTextField();
+        jLabel12 = new javax.swing.JLabel();
+        TxtPrecoC = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        TxtModeloC1 = new javax.swing.JTextField();
+        jLabel14 = new javax.swing.JLabel();
+        jLabel15 = new javax.swing.JLabel();
+        TxtMarcaC1 = new javax.swing.JTextField();
+        jLabel16 = new javax.swing.JLabel();
+        TxtVolC = new javax.swing.JTextField();
+        jPanel5 = new javax.swing.JPanel();
+        PnlMotorC1 = new javax.swing.JPanel();
+        TxtCombusM = new javax.swing.JTextField();
+        jLabel17 = new javax.swing.JLabel();
+        TxtRpmMaxM = new javax.swing.JTextField();
+        jLabel18 = new javax.swing.JLabel();
+        TxtRpmM = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        TxtModeloM = new javax.swing.JTextField();
+        jLabel20 = new javax.swing.JLabel();
+        TxtMarcaM = new javax.swing.JTextField();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        TxtVolBgM = new javax.swing.JTextField();
+        TxtPropM = new javax.swing.JTextField();
+        TxtNumM = new javax.swing.JTextField();
+        TxtPrecoM = new javax.swing.JTextField();
+        TxtMarcaM2 = new javax.swing.JTextField();
+        TxtModeloM2 = new javax.swing.JTextField();
+        jPanel6 = new javax.swing.JPanel();
+        BtnInserirM = new javax.swing.JButton();
+        TxtLimparM = new javax.swing.JButton();
+        BtnConsM2 = new javax.swing.JButton();
+        BtnConsM3 = new javax.swing.JButton();
+        BtnConsM4 = new javax.swing.JButton();
+        BtnConsM6 = new javax.swing.JButton();
+        BtnConsM8 = new javax.swing.JButton();
+        BtnConsM7 = new javax.swing.JButton();
+        BtnConsM9 = new javax.swing.JButton();
+        BtnConsM5 = new javax.swing.JButton();
+        BtnConsM10 = new javax.swing.JButton();
+        BtnReiniciarM = new javax.swing.JButton();
+        BtnImprimirM = new javax.swing.JButton();
+        BtnDesM = new javax.swing.JButton();
+        BtnAcelM = new javax.swing.JButton();
+        BtnEsqM = new javax.swing.JButton();
+        BtnDirM = new javax.swing.JButton();
+        BtnFrearM = new javax.swing.JButton();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        BtnInserirO = new javax.swing.JButton();
+        TxtLimparO = new javax.swing.JButton();
+        BtnConsO2 = new javax.swing.JButton();
+        BtnConsO3 = new javax.swing.JButton();
+        BtnConsO4 = new javax.swing.JButton();
+        BtnConsO6 = new javax.swing.JButton();
+        BtnConsO8 = new javax.swing.JButton();
+        BtnConsO7 = new javax.swing.JButton();
+        BtnConsO9 = new javax.swing.JButton();
+        BtnConsO5 = new javax.swing.JButton();
+        BtnConsO10 = new javax.swing.JButton();
+        BtnReiniciarO = new javax.swing.JButton();
+        BtnImprimirO = new javax.swing.JButton();
+        BtnDesO = new javax.swing.JButton();
+        BtnAcelO = new javax.swing.JButton();
+        BtnEsqO = new javax.swing.JButton();
+        BtnDirO = new javax.swing.JButton();
+        BtnFrearO = new javax.swing.JButton();
+        jLabel28 = new javax.swing.JLabel();
+        TxtMotoO = new javax.swing.JTextField();
+        TxtPropO = new javax.swing.JTextField();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        TxtNumO = new javax.swing.JTextField();
+        TxtPrecoO = new javax.swing.JTextField();
+        jLabel31 = new javax.swing.JLabel();
+        TxtModeloO2 = new javax.swing.JTextField();
+        jLabel32 = new javax.swing.JLabel();
+        TxtMarcaO2 = new javax.swing.JTextField();
+        jLabel33 = new javax.swing.JLabel();
+        PnlMotorC2 = new javax.swing.JPanel();
+        TxtCombusO = new javax.swing.JTextField();
+        jLabel34 = new javax.swing.JLabel();
+        TxtRpmMaxO = new javax.swing.JTextField();
+        jLabel35 = new javax.swing.JLabel();
+        TxtRpmO = new javax.swing.JTextField();
+        jLabel36 = new javax.swing.JLabel();
+        TxtModeloO = new javax.swing.JTextField();
+        jLabel37 = new javax.swing.JLabel();
+        TxtMarcaO = new javax.swing.JTextField();
+        jLabel38 = new javax.swing.JLabel();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        jMenu1 = new javax.swing.JMenu();
+        jMenu2 = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        JPaneMotor.setName(""); // NOI18N
+        JPaneMotor.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2));
+        JPaneMotor.setName("Trabalho A2"); // NOI18N
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -71,7 +221,7 @@ public class Principal extends javax.swing.JFrame {
                 TxtMarcaActionPerformed(evt);
             }
         });
-        jPanel1.add(TxtMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(43, 11, 204, -1));
+        jPanel1.add(TxtMarca, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 10, 204, -1));
 
         jLabel2.setText("Modelo");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, -1, -1));
@@ -81,7 +231,7 @@ public class Principal extends javax.swing.JFrame {
                 TxtModeloActionPerformed(evt);
             }
         });
-        jPanel1.add(TxtModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(48, 37, 204, -1));
+        jPanel1.add(TxtModelo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 40, 204, -1));
 
         jLabel3.setText("RPM");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 71, -1, -1));
@@ -91,7 +241,7 @@ public class Principal extends javax.swing.JFrame {
                 TxtRpmActionPerformed(evt);
             }
         });
-        jPanel1.add(TxtRpm, new org.netbeans.lib.awtextra.AbsoluteConstraints(35, 68, 204, -1));
+        jPanel1.add(TxtRpm, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 70, 204, -1));
 
         jLabel4.setText("RPM Máximo");
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 102, -1, -1));
@@ -101,19 +251,19 @@ public class Principal extends javax.swing.JFrame {
                 TxtRpmMaxActionPerformed(evt);
             }
         });
-        jPanel1.add(TxtRpmMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(74, 99, 204, -1));
+        jPanel1.add(TxtRpmMax, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 204, -1));
 
         jLabel5.setText("Tipo Combustível");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 128, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
 
         TxtCombus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 TxtCombusActionPerformed(evt);
             }
         });
-        jPanel1.add(TxtCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 125, 204, -1));
+        jPanel1.add(TxtCombus, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 130, 204, -1));
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), "Menu", javax.swing.border.TitledBorder.CENTER, javax.swing.border.TitledBorder.DEFAULT_POSITION));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), "Menu", 2, 0));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         BtnInserir.setText("Inserir");
@@ -204,6 +354,14 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel2.add(BtnCons10, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 143, 100, -1));
 
+        BtnReiniciar.setText("Reiniciar");
+        BtnReiniciar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnReiniciarActionPerformed(evt);
+            }
+        });
+        jPanel2.add(BtnReiniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 80, 20));
+
         BtnImprimir.setText("Imprimir");
         BtnImprimir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -212,26 +370,991 @@ public class Principal extends javax.swing.JFrame {
         });
         jPanel2.add(BtnImprimir, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 27, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 510, 182));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 390, 510, 182));
 
         JPaneMotor.addTab("Motor", jPanel1);
+
+        jPanel4.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel3.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), "Menu", 2, 0));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BtnInserirC.setText("Inserir");
+        BtnInserirC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnInserirCActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnInserirC, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, 91, -1));
+
+        TxtLimparC.setText("Limpar!");
+        TxtLimparC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtLimparCActionPerformed(evt);
+            }
+        });
+        jPanel3.add(TxtLimparC, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, -1, -1));
+
+        BtnConsC2.setText("Construtor2");
+        BtnConsC2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsC2ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnConsC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 56, -1, -1));
+
+        BtnConsC3.setText("Construtor3");
+        BtnConsC3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsC3ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnConsC3, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 85, -1, -1));
+
+        BtnConsC4.setText("Construtor4");
+        BtnConsC4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsC4ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnConsC4, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 114, -1, -1));
+
+        BtnConsC6.setText("Construtor6");
+        BtnConsC6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsC6ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnConsC6, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 27, -1, -1));
+
+        BtnConsC8.setText("Construtor8");
+        BtnConsC8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsC8ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnConsC8, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 85, -1, -1));
+
+        BtnConsC7.setText("Construtor7");
+        BtnConsC7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsC7ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnConsC7, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 56, -1, -1));
+
+        BtnConsC9.setText("Construtor9");
+        BtnConsC9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsC9ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnConsC9, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 114, -1, -1));
+
+        BtnConsC5.setText("Construtor5");
+        BtnConsC5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsC5ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnConsC5, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 143, -1, -1));
+
+        BtnConsC10.setText("Construtor10");
+        BtnConsC10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsC10ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnConsC10, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 143, 100, -1));
+
+        BtnReiniciarC.setText("Reiniciar");
+        BtnReiniciarC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnReiniciarCActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnReiniciarC, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 80, 20));
+
+        BtnImprimirC.setText("Imprimir");
+        BtnImprimirC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnImprimirCActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnImprimirC, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 27, -1, -1));
+
+        BtnDesC.setText("Desacelerar");
+        BtnDesC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnDesCActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnDesC, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, -1, -1));
+
+        BtnAcelC1.setText("Acelerar");
+        BtnAcelC1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAcelC1ActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnAcelC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, -1, -1));
+
+        BtnEsqC.setText("Esquerda");
+        BtnEsqC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEsqCActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnEsqC, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
+
+        BtnDirC.setText("Direita");
+        BtnDirC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnDirCActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnDirC, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
+
+        BtnFrearC.setText("Frear");
+        BtnFrearC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnFrearCActionPerformed(evt);
+            }
+        });
+        jPanel3.add(BtnFrearC, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
+
+        jPanel4.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 510, 182));
+
+        PnlMotorC.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), "Motor", 2, 0));
+
+        TxtCombusC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtCombusCActionPerformed(evt);
+            }
+        });
+
+        jLabel10.setText("Tipo Combustível");
+
+        TxtRpmMaxC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtRpmMaxCActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setText("RPM Máximo");
+
+        TxtRpmC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtRpmCActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("RPM");
+
+        TxtModeloC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtModeloCActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Modelo");
+
+        jLabel6.setText("Marca");
+
+        javax.swing.GroupLayout PnlMotorCLayout = new javax.swing.GroupLayout(PnlMotorC);
+        PnlMotorC.setLayout(PnlMotorCLayout);
+        PnlMotorCLayout.setHorizontalGroup(
+            PnlMotorCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlMotorCLayout.createSequentialGroup()
+                .addGroup(PnlMotorCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(PnlMotorCLayout.createSequentialGroup()
+                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TxtMarcaC, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorCLayout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TxtModeloC, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorCLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TxtRpmC, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorCLayout.createSequentialGroup()
+                        .addGroup(PnlMotorCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorCLayout.createSequentialGroup()
+                                .addComponent(jLabel10)
+                                .addGap(18, 18, 18))
+                            .addGroup(PnlMotorCLayout.createSequentialGroup()
+                                .addComponent(jLabel9)
+                                .addGap(39, 39, 39)))
+                        .addGroup(PnlMotorCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TxtRpmMaxC, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TxtCombusC, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(1, 1, 1)))
+                .addGap(0, 138, Short.MAX_VALUE))
+        );
+        PnlMotorCLayout.setVerticalGroup(
+            PnlMotorCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlMotorCLayout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addGroup(PnlMotorCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(TxtMarcaC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(PnlMotorCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PnlMotorCLayout.createSequentialGroup()
+                        .addComponent(jLabel8)
+                        .addGap(4, 4, 4))
+                    .addGroup(PnlMotorCLayout.createSequentialGroup()
+                        .addGroup(PnlMotorCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(TxtModeloC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel7))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TxtRpmC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(9, 9, 9)
+                .addGroup(PnlMotorCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel9)
+                    .addComponent(TxtRpmMaxC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(PnlMotorCLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel10)
+                    .addComponent(TxtCombusC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 12, Short.MAX_VALUE))
+        );
+
+        jPanel4.add(PnlMotorC, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 180));
+
+        jLabel11.setText("Proprietário");
+        jPanel4.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
+
+        TxtPropC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtPropCActionPerformed(evt);
+            }
+        });
+        jPanel4.add(TxtPropC, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 200, -1));
+
+        TxtNumC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtNumCActionPerformed(evt);
+            }
+        });
+        jPanel4.add(TxtNumC, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 200, -1));
+
+        jLabel12.setText("Numero de Passageiros");
+        jPanel4.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+
+        TxtPrecoC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtPrecoCActionPerformed(evt);
+            }
+        });
+        jPanel4.add(TxtPrecoC, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 200, -1));
+
+        jLabel13.setText("Preço");
+        jPanel4.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+
+        TxtModeloC1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtModeloC1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(TxtModeloC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 200, -1));
+
+        jLabel14.setText("Modelo");
+        jPanel4.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+
+        jLabel15.setText("Marca");
+        jPanel4.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 55, -1));
+
+        TxtMarcaC1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtMarcaC1ActionPerformed(evt);
+            }
+        });
+        jPanel4.add(TxtMarcaC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 200, -1));
+
+        jLabel16.setText("Volume da Mala");
+        jPanel4.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
+
+        TxtVolC.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtVolCActionPerformed(evt);
+            }
+        });
+        jPanel4.add(TxtVolC, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 200, -1));
+
+        JPaneMotor.addTab("Carro", jPanel4);
+
+        jPanel5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        PnlMotorC1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), "Motor", 2, 0));
+
+        TxtCombusM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtCombusMActionPerformed(evt);
+            }
+        });
+
+        jLabel17.setText("Tipo Combustível");
+
+        TxtRpmMaxM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtRpmMaxMActionPerformed(evt);
+            }
+        });
+
+        jLabel18.setText("RPM Máximo");
+
+        TxtRpmM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtRpmMActionPerformed(evt);
+            }
+        });
+
+        jLabel19.setText("RPM");
+
+        TxtModeloM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtModeloMActionPerformed(evt);
+            }
+        });
+
+        jLabel20.setText("Modelo");
+
+        jLabel21.setText("Marca");
+
+        javax.swing.GroupLayout PnlMotorC1Layout = new javax.swing.GroupLayout(PnlMotorC1);
+        PnlMotorC1.setLayout(PnlMotorC1Layout);
+        PnlMotorC1Layout.setHorizontalGroup(
+            PnlMotorC1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlMotorC1Layout.createSequentialGroup()
+                .addGroup(PnlMotorC1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(PnlMotorC1Layout.createSequentialGroup()
+                        .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TxtMarcaM, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorC1Layout.createSequentialGroup()
+                        .addComponent(jLabel20)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TxtModeloM, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorC1Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TxtRpmM, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorC1Layout.createSequentialGroup()
+                        .addGroup(PnlMotorC1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorC1Layout.createSequentialGroup()
+                                .addComponent(jLabel17)
+                                .addGap(18, 18, 18))
+                            .addGroup(PnlMotorC1Layout.createSequentialGroup()
+                                .addComponent(jLabel18)
+                                .addGap(39, 39, 39)))
+                        .addGroup(PnlMotorC1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TxtRpmMaxM, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TxtCombusM, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(1, 1, 1)))
+                .addGap(0, 138, Short.MAX_VALUE))
+        );
+        PnlMotorC1Layout.setVerticalGroup(
+            PnlMotorC1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlMotorC1Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addGroup(PnlMotorC1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel21)
+                    .addComponent(TxtMarcaM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(PnlMotorC1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PnlMotorC1Layout.createSequentialGroup()
+                        .addComponent(jLabel19)
+                        .addGap(4, 4, 4))
+                    .addGroup(PnlMotorC1Layout.createSequentialGroup()
+                        .addGroup(PnlMotorC1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(TxtModeloM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel20))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TxtRpmM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(9, 9, 9)
+                .addGroup(PnlMotorC1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel18)
+                    .addComponent(TxtRpmMaxM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(PnlMotorC1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel17)
+                    .addComponent(TxtCombusM, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 12, Short.MAX_VALUE))
+        );
+
+        jPanel5.add(PnlMotorC1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 180));
+
+        jLabel22.setText("Marca");
+        jPanel5.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 55, -1));
+
+        jLabel23.setText("Modelo");
+        jPanel5.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+
+        jLabel24.setText("Preço");
+        jPanel5.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+
+        jLabel25.setText("Numero de Passageiros");
+        jPanel5.add(jLabel25, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+
+        jLabel26.setText("Proprietário");
+        jPanel5.add(jLabel26, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
+
+        jLabel27.setText("Volume do Bagageiro");
+        jPanel5.add(jLabel27, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
+
+        TxtVolBgM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtVolBgMActionPerformed(evt);
+            }
+        });
+        jPanel5.add(TxtVolBgM, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 200, -1));
+
+        TxtPropM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtPropMActionPerformed(evt);
+            }
+        });
+        jPanel5.add(TxtPropM, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 200, -1));
+
+        TxtNumM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtNumMActionPerformed(evt);
+            }
+        });
+        jPanel5.add(TxtNumM, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 200, -1));
+
+        TxtPrecoM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtPrecoMActionPerformed(evt);
+            }
+        });
+        jPanel5.add(TxtPrecoM, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 200, -1));
+
+        TxtMarcaM2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtMarcaM2ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(TxtMarcaM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 200, -1));
+
+        TxtModeloM2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtModeloM2ActionPerformed(evt);
+            }
+        });
+        jPanel5.add(TxtModeloM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 200, -1));
+
+        jPanel6.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), "Menu", 2, 0));
+        jPanel6.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BtnInserirM.setText("Inserir");
+        BtnInserirM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnInserirMActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnInserirM, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, 91, -1));
+
+        TxtLimparM.setText("Limpar!");
+        TxtLimparM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtLimparMActionPerformed(evt);
+            }
+        });
+        jPanel6.add(TxtLimparM, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, -1, -1));
+
+        BtnConsM2.setText("Construtor2");
+        BtnConsM2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsM2ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnConsM2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 56, -1, -1));
+
+        BtnConsM3.setText("Construtor3");
+        BtnConsM3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsM3ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnConsM3, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 85, -1, -1));
+
+        BtnConsM4.setText("Construtor4");
+        BtnConsM4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsM4ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnConsM4, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 114, -1, -1));
+
+        BtnConsM6.setText("Construtor6");
+        BtnConsM6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsM6ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnConsM6, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 27, -1, -1));
+
+        BtnConsM8.setText("Construtor8");
+        BtnConsM8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsM8ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnConsM8, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 85, -1, -1));
+
+        BtnConsM7.setText("Construtor7");
+        BtnConsM7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsM7ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnConsM7, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 56, -1, -1));
+
+        BtnConsM9.setText("Construtor9");
+        BtnConsM9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsM9ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnConsM9, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 114, -1, -1));
+
+        BtnConsM5.setText("Construtor5");
+        BtnConsM5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsM5ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnConsM5, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 143, -1, -1));
+
+        BtnConsM10.setText("Construtor10");
+        BtnConsM10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsM10ActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnConsM10, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 143, 100, -1));
+
+        BtnReiniciarM.setText("Reiniciar");
+        BtnReiniciarM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnReiniciarMActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnReiniciarM, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 80, 20));
+
+        BtnImprimirM.setText("Imprimir");
+        BtnImprimirM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnImprimirMActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnImprimirM, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 27, -1, -1));
+
+        BtnDesM.setText("Desacelerar");
+        BtnDesM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnDesMActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnDesM, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, -1, -1));
+
+        BtnAcelM.setText("Acelerar");
+        BtnAcelM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAcelMActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnAcelM, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, -1, -1));
+
+        BtnEsqM.setText("Esquerda");
+        BtnEsqM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEsqMActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnEsqM, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
+
+        BtnDirM.setText("Direita");
+        BtnDirM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnDirMActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnDirM, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
+
+        BtnFrearM.setText("Frear");
+        BtnFrearM.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnFrearMActionPerformed(evt);
+            }
+        });
+        jPanel6.add(BtnFrearM, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
+
+        jPanel5.add(jPanel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 510, 182));
+
+        JPaneMotor.addTab("Moto", jPanel5);
+
+        jPanel7.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel8.setBorder(javax.swing.BorderFactory.createTitledBorder(new javax.swing.border.LineBorder(new java.awt.Color(0, 0, 0), 2, true), "Menu", 2, 0));
+        jPanel8.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BtnInserirO.setText("Inserir");
+        BtnInserirO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnInserirOActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnInserirO, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 27, 91, -1));
+
+        TxtLimparO.setText("Limpar!");
+        TxtLimparO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtLimparOActionPerformed(evt);
+            }
+        });
+        jPanel8.add(TxtLimparO, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 140, -1, -1));
+
+        BtnConsO2.setText("Construtor2");
+        BtnConsO2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsO2ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnConsO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 56, -1, -1));
+
+        BtnConsO3.setText("Construtor3");
+        BtnConsO3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsO3ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnConsO3, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 85, -1, -1));
+
+        BtnConsO4.setText("Construtor4");
+        BtnConsO4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsO4ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnConsO4, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 114, -1, -1));
+
+        BtnConsO6.setText("Construtor6");
+        BtnConsO6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsO6ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnConsO6, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 27, -1, -1));
+
+        BtnConsO8.setText("Construtor8");
+        BtnConsO8.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsO8ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnConsO8, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 85, -1, -1));
+
+        BtnConsO7.setText("Construtor7");
+        BtnConsO7.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsO7ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnConsO7, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 56, -1, -1));
+
+        BtnConsO9.setText("Construtor9");
+        BtnConsO9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsO9ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnConsO9, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 114, -1, -1));
+
+        BtnConsO5.setText("Construtor5");
+        BtnConsO5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsO5ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnConsO5, new org.netbeans.lib.awtextra.AbsoluteConstraints(16, 143, -1, -1));
+
+        BtnConsO10.setText("Construtor10");
+        BtnConsO10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnConsO10ActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnConsO10, new org.netbeans.lib.awtextra.AbsoluteConstraints(113, 143, 100, -1));
+
+        BtnReiniciarO.setText("Reiniciar");
+        BtnReiniciarO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnReiniciarOActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnReiniciarO, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 60, 80, 20));
+
+        BtnImprimirO.setText("Imprimir");
+        BtnImprimirO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnImprimirOActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnImprimirO, new org.netbeans.lib.awtextra.AbsoluteConstraints(334, 27, -1, -1));
+
+        BtnDesO.setText("Desacelerar");
+        BtnDesO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnDesOActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnDesO, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, -1, -1));
+
+        BtnAcelO.setText("Acelerar");
+        BtnAcelO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnAcelOActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnAcelO, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, -1, -1));
+
+        BtnEsqO.setText("Esquerda");
+        BtnEsqO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEsqOActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnEsqO, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, -1, -1));
+
+        BtnDirO.setText("Direita");
+        BtnDirO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnDirOActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnDirO, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 120, -1, -1));
+
+        BtnFrearO.setText("Frear");
+        BtnFrearO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnFrearOActionPerformed(evt);
+            }
+        });
+        jPanel8.add(BtnFrearO, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, -1, -1));
+
+        jPanel7.add(jPanel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 420, 510, 182));
+
+        jLabel28.setText("Motorista");
+        jPanel7.add(jLabel28, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, -1, -1));
+
+        TxtMotoO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtMotoOActionPerformed(evt);
+            }
+        });
+        jPanel7.add(TxtMotoO, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 340, 200, -1));
+
+        TxtPropO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtPropOActionPerformed(evt);
+            }
+        });
+        jPanel7.add(TxtPropO, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 310, 200, -1));
+
+        jLabel29.setText("Proprietário");
+        jPanel7.add(jLabel29, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 310, -1, -1));
+
+        jLabel30.setText("Numero de Passageiros");
+        jPanel7.add(jLabel30, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, -1, -1));
+
+        TxtNumO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtNumOActionPerformed(evt);
+            }
+        });
+        jPanel7.add(TxtNumO, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 280, 200, -1));
+
+        TxtPrecoO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtPrecoOActionPerformed(evt);
+            }
+        });
+        jPanel7.add(TxtPrecoO, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 200, -1));
+
+        jLabel31.setText("Preço");
+        jPanel7.add(jLabel31, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 250, -1, -1));
+
+        TxtModeloO2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtModeloO2ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(TxtModeloO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 220, 200, -1));
+
+        jLabel32.setText("Modelo");
+        jPanel7.add(jLabel32, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 220, -1, -1));
+
+        TxtMarcaO2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtMarcaO2ActionPerformed(evt);
+            }
+        });
+        jPanel7.add(TxtMarcaO2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 190, 200, -1));
+
+        jLabel33.setText("Marca");
+        jPanel7.add(jLabel33, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 55, -1));
+
+        PnlMotorC2.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 2), "Motor", 2, 0));
+
+        TxtCombusO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtCombusOActionPerformed(evt);
+            }
+        });
+
+        jLabel34.setText("Tipo Combustível");
+
+        TxtRpmMaxO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtRpmMaxOActionPerformed(evt);
+            }
+        });
+
+        jLabel35.setText("RPM Máximo");
+
+        TxtRpmO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtRpmOActionPerformed(evt);
+            }
+        });
+
+        jLabel36.setText("RPM");
+
+        TxtModeloO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtModeloOActionPerformed(evt);
+            }
+        });
+
+        jLabel37.setText("Modelo");
+
+        TxtMarcaO.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TxtMarcaOActionPerformed(evt);
+            }
+        });
+
+        jLabel38.setText("Marca");
+
+        javax.swing.GroupLayout PnlMotorC2Layout = new javax.swing.GroupLayout(PnlMotorC2);
+        PnlMotorC2.setLayout(PnlMotorC2Layout);
+        PnlMotorC2Layout.setHorizontalGroup(
+            PnlMotorC2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlMotorC2Layout.createSequentialGroup()
+                .addGroup(PnlMotorC2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(PnlMotorC2Layout.createSequentialGroup()
+                        .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TxtMarcaO, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorC2Layout.createSequentialGroup()
+                        .addComponent(jLabel37)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TxtModeloO, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorC2Layout.createSequentialGroup()
+                        .addComponent(jLabel36)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(TxtRpmO, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorC2Layout.createSequentialGroup()
+                        .addGroup(PnlMotorC2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PnlMotorC2Layout.createSequentialGroup()
+                                .addComponent(jLabel34)
+                                .addGap(18, 18, 18))
+                            .addGroup(PnlMotorC2Layout.createSequentialGroup()
+                                .addComponent(jLabel35)
+                                .addGap(39, 39, 39)))
+                        .addGroup(PnlMotorC2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(TxtRpmMaxO, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(TxtCombusO, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(1, 1, 1)))
+                .addGap(0, 138, Short.MAX_VALUE))
+        );
+        PnlMotorC2Layout.setVerticalGroup(
+            PnlMotorC2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(PnlMotorC2Layout.createSequentialGroup()
+                .addGap(3, 3, 3)
+                .addGroup(PnlMotorC2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel38)
+                    .addComponent(TxtMarcaO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(15, 15, 15)
+                .addGroup(PnlMotorC2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(PnlMotorC2Layout.createSequentialGroup()
+                        .addComponent(jLabel36)
+                        .addGap(4, 4, 4))
+                    .addGroup(PnlMotorC2Layout.createSequentialGroup()
+                        .addGroup(PnlMotorC2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(TxtModeloO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jLabel37))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(TxtRpmO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(9, 9, 9)
+                .addGroup(PnlMotorC2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel35)
+                    .addComponent(TxtRpmMaxO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(8, 8, 8)
+                .addGroup(PnlMotorC2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel34)
+                    .addComponent(TxtCombusO, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(0, 12, Short.MAX_VALUE))
+        );
+
+        jPanel7.add(PnlMotorC2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 450, 180));
+
+        JPaneMotor.addTab("Ônibus", jPanel7);
+
+        jMenu1.setText("Sobre");
+        jMenu1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu1MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu1);
+
+        jMenu2.setText("Sair");
+        jMenu2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu2MouseClicked(evt);
+            }
+        });
+        jMenuBar1.add(jMenu2);
+
+        setJMenuBar(jMenuBar1);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JPaneMotor)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(JPaneMotor, javax.swing.GroupLayout.PREFERRED_SIZE, 725, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(JPaneMotor)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(JPaneMotor, javax.swing.GroupLayout.PREFERRED_SIZE, 641, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
-        JPaneMotor.getAccessibleContext().setAccessibleName("Motor");
+        JPaneMotor.getAccessibleContext().setAccessibleName("");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    
     private void TxtMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtMarcaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtMarcaActionPerformed
@@ -253,14 +1376,22 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_TxtCombusActionPerformed
 
     private void BtnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInserirActionPerformed
-        // TODO add your handling code here:
-        int max = Integer.parseInt(JOptionPane.showInputDialog(null, "Quantos motores deseja inserir?" , "Motor" ,JOptionPane.INFORMATION_MESSAGE));
-        ArrayList<Motor> motor = new ArrayList<Motor>(max);
-        Motor mt = new Motor();
-        for(int i = 0; i < max; i++){
-            mt.cadastrar(TxtMarca.getText(), TxtModelo.getText(), TxtCombus.getText(), Integer.parseInt(TxtRpm.getText()), Integer.parseInt(TxtRpmMax.getText()));
+        // TODO add your handling code here:        
+        try{
+            if(pos < max){
+                Motor mt = new Motor();
+                mt.cadastrar(TxtMarca.getText(), TxtModelo.getText(), TxtCombus.getText(), Integer.parseInt(TxtRpm.getText()), Integer.parseInt(TxtRpmMax.getText()));
+                motor.add(mt);
+                if(mt != null){
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!","Motor", JOptionPane.INFORMATION_MESSAGE);
+                }
+             pos++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null , "Erro!! " +e);
         }
-        motor.add(mt);
     }//GEN-LAST:event_BtnInserirActionPerformed
 
     private void TxtLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtLimparActionPerformed
@@ -269,7 +1400,7 @@ public class Principal extends javax.swing.JFrame {
         TxtModelo.setText("");
         TxtCombus.setText("");
         TxtRpm.setText("");
-        TxtRpmMax.setText("");
+        TxtRpmMax.setText(""); 
     }//GEN-LAST:event_TxtLimparActionPerformed
 
     private void BtnCons2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCons2ActionPerformed
@@ -309,9 +1440,493 @@ public class Principal extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_BtnCons10ActionPerformed
 
+    private void BtnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReiniciarActionPerformed
+        // TODO add your handling code here:
+        pos = 0;
+        JOptionPane.showMessageDialog(null, "ArrayList reiniciado com sucesso!!");
+    }//GEN-LAST:event_BtnReiniciarActionPerformed
+
     private void BtnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnImprimirActionPerformed
         // TODO add your handling code here:
+        Iterator<Motor> iterator = motor.iterator();
+            while(iterator.hasNext()){
+                Motor motor = new Motor();
+                motor = iterator.next();
+                motor.imprimir();
+            }
     }//GEN-LAST:event_BtnImprimirActionPerformed
+
+    private void TxtModeloCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtModeloCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtModeloCActionPerformed
+
+    private void TxtRpmCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtRpmCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtRpmCActionPerformed
+
+    private void TxtRpmMaxCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtRpmMaxCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtRpmMaxCActionPerformed
+
+    private void TxtCombusCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCombusCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtCombusCActionPerformed
+
+    private void BtnInserirCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInserirCActionPerformed
+         try{
+            if(posc < max){
+                Carro cr = new Carro();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaC.getText());
+                mt1.setModelo(TxtModeloC.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmC.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxC.getText()));
+                
+                cr.cadastrar(Integer.parseInt(TxtNumC.getText()),Double.parseDouble(TxtPrecoC.getText()),TxtPropC.getText(), TxtMarcaC1.getText(),TxtModeloC1.getText(),mt1,Integer.parseInt(TxtVolC.getText()));
+                carro.add(cr);
+                if(cr != null){
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!","Carro", JOptionPane.INFORMATION_MESSAGE);
+                }
+             posc++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null , "Erro!! " +e);
+        }
+    }//GEN-LAST:event_BtnInserirCActionPerformed
+
+    private void TxtLimparCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtLimparCActionPerformed
+        // TODO add your handling code here:
+                TxtMarcaC.setText("");
+                TxtModeloC.setText("");
+                TxtRpmC.setText("");
+                TxtRpmMaxC.setText("");                
+                TxtNumC.setText("");
+                TxtPrecoC.setText("");
+                TxtPropC.setText("");
+                TxtMarcaC1.setText("");
+                TxtModeloC1.setText("");
+                TxtVolC.setText("");
+ 
+    }//GEN-LAST:event_TxtLimparCActionPerformed
+
+    private void BtnConsC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsC2ActionPerformed
+
+    private void BtnConsC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsC3ActionPerformed
+
+    private void BtnConsC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsC4ActionPerformed
+
+    private void BtnConsC6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsC6ActionPerformed
+
+    private void BtnConsC8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsC8ActionPerformed
+
+    private void BtnConsC7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsC7ActionPerformed
+
+    private void BtnConsC9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsC9ActionPerformed
+
+    private void BtnConsC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsC5ActionPerformed
+
+    private void BtnConsC10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsC10ActionPerformed
+
+    private void BtnReiniciarCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReiniciarCActionPerformed
+        // TODO add your handling code here:
+        posc = 0;
+        JOptionPane.showMessageDialog(null, "ArrayList reiniciado com sucesso!!");
+    }//GEN-LAST:event_BtnReiniciarCActionPerformed
+
+    private void BtnImprimirCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnImprimirCActionPerformed
+        // TODO add your handling code here:
+          Iterator<Carro> iterator = carro.iterator();
+            while(iterator.hasNext()){
+                Carro carr = new Carro();
+                carr = iterator.next();
+                carr.imprimir();
+            }
+    }//GEN-LAST:event_BtnImprimirCActionPerformed
+
+    private void TxtPropCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtPropCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtPropCActionPerformed
+
+    private void TxtNumCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNumCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtNumCActionPerformed
+
+    private void TxtPrecoCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtPrecoCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtPrecoCActionPerformed
+
+    private void TxtModeloC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtModeloC1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtModeloC1ActionPerformed
+
+    private void TxtVolCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtVolCActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtVolCActionPerformed
+
+    private void TxtMarcaC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtMarcaC1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtMarcaC1ActionPerformed
+
+    private void BtnDesCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDesCActionPerformed
+        // TODO add your handling code here:
+        cr.desacelerar();
+    }//GEN-LAST:event_BtnDesCActionPerformed
+
+    private void BtnAcelC1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAcelC1ActionPerformed
+        // TODO add your handling code here:
+        cr.acelerar();
+    }//GEN-LAST:event_BtnAcelC1ActionPerformed
+
+    private void BtnFrearCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnFrearCActionPerformed
+        // TODO add your handling code here:
+        cr.frear();
+    }//GEN-LAST:event_BtnFrearCActionPerformed
+
+    private void BtnEsqCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEsqCActionPerformed
+        // TODO add your handling code here:
+        cr.virarEsquerda();
+    }//GEN-LAST:event_BtnEsqCActionPerformed
+
+    private void BtnDirCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDirCActionPerformed
+        // TODO add your handling code here:
+        cr.virarDireita();
+    }//GEN-LAST:event_BtnDirCActionPerformed
+
+    private void TxtCombusMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCombusMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtCombusMActionPerformed
+
+    private void TxtRpmMaxMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtRpmMaxMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtRpmMaxMActionPerformed
+
+    private void TxtRpmMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtRpmMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtRpmMActionPerformed
+
+    private void TxtModeloMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtModeloMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtModeloMActionPerformed
+
+    private void TxtVolBgMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtVolBgMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtVolBgMActionPerformed
+
+    private void TxtPropMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtPropMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtPropMActionPerformed
+
+    private void TxtNumMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNumMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtNumMActionPerformed
+
+    private void TxtPrecoMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtPrecoMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtPrecoMActionPerformed
+
+    private void TxtMarcaM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtMarcaM2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtMarcaM2ActionPerformed
+
+    private void TxtModeloM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtModeloM2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtModeloM2ActionPerformed
+
+    private void BtnInserirMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInserirMActionPerformed
+       try{
+            if(posm < max){
+                Moto mto = new Moto();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaM.getText());
+                mt1.setModelo(TxtModeloM.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmM.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxM.getText()));
+                
+                mto.cadastrar(Integer.parseInt(TxtNumM.getText()),Double.parseDouble(TxtPrecoM.getText()),TxtPropM.getText(), TxtMarcaM2.getText(),TxtModeloM2.getText(),mt1,Integer.parseInt(TxtVolBgM.getText()));
+                moto.add(mto);
+                if(mto != null){
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!","Moto", JOptionPane.INFORMATION_MESSAGE);
+                }
+             posm++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null , "Erro!! " +e);
+        }
+    }//GEN-LAST:event_BtnInserirMActionPerformed
+
+    private void TxtLimparMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtLimparMActionPerformed
+        // TODO add your handling code here:
+                TxtMarcaM.setText("");
+                TxtModeloM.setText("");
+                TxtRpmM.setText("");
+                TxtRpmMaxM.setText("");                
+                TxtNumM.setText("");
+                TxtPrecoM.setText("");
+                TxtPropM.setText("");
+                TxtMarcaM2.setText("");
+                TxtModeloM2.setText("");
+                TxtVolBgM.setText("");
+              
+    }//GEN-LAST:event_TxtLimparMActionPerformed
+
+    private void BtnConsM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsM2ActionPerformed
+
+    private void BtnConsM3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsM3ActionPerformed
+
+    private void BtnConsM4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsM4ActionPerformed
+
+    private void BtnConsM6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsM6ActionPerformed
+
+    private void BtnConsM8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsM8ActionPerformed
+
+    private void BtnConsM7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsM7ActionPerformed
+
+    private void BtnConsM9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsM9ActionPerformed
+
+    private void BtnConsM5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsM5ActionPerformed
+
+    private void BtnConsM10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsM10ActionPerformed
+
+    private void BtnReiniciarMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReiniciarMActionPerformed
+        // TODO add your handling code here:
+        posm = 0;
+        JOptionPane.showMessageDialog(null, "ArrayList reiniciado com sucesso!!");
+    }//GEN-LAST:event_BtnReiniciarMActionPerformed
+
+    private void BtnImprimirMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnImprimirMActionPerformed
+        Iterator<Moto> iterator = moto.iterator();
+            while(iterator.hasNext()){
+                Moto mot = new Moto();
+                mot = iterator.next();
+                mot.imprimir();
+            }
+    }//GEN-LAST:event_BtnImprimirMActionPerformed
+
+    private void BtnDesMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDesMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnDesMActionPerformed
+
+    private void BtnAcelMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAcelMActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnAcelMActionPerformed
+
+    private void BtnEsqMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEsqMActionPerformed
+        // TODO add your handling code here:
+        mto.virarEsquerda();
+    }//GEN-LAST:event_BtnEsqMActionPerformed
+
+    private void BtnDirMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDirMActionPerformed
+        // TODO add your handling code here:
+        mto.virarDireita();
+    }//GEN-LAST:event_BtnDirMActionPerformed
+
+    private void BtnFrearMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnFrearMActionPerformed
+        // TODO add your handling code here:
+        mto.frear();
+    }//GEN-LAST:event_BtnFrearMActionPerformed
+
+    private void BtnInserirOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInserirOActionPerformed
+        try{
+            if(poso < max){
+                Onibus oni = new Onibus();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaO.getText());
+                mt1.setModelo(TxtModeloO.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmO.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxO.getText()));
+                
+                oni.cadastrar(Integer.parseInt(TxtNumM.getText()),Double.parseDouble(TxtPrecoM.getText()),TxtPropM.getText(), TxtMarcaM2.getText(),TxtModeloM2.getText(),mt1,TxtMotoO.getText());
+                onibus.add(oni);
+                if(oni != null){
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!","Ônibus", JOptionPane.INFORMATION_MESSAGE);
+                }
+             poso++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch(Exception e){
+            JOptionPane.showMessageDialog(null , "Erro!! " +e);
+        }
+    }//GEN-LAST:event_BtnInserirOActionPerformed
+
+    private void TxtLimparOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtLimparOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtLimparOActionPerformed
+
+    private void BtnConsO2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsO2ActionPerformed
+
+    private void BtnConsO3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO3ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsO3ActionPerformed
+
+    private void BtnConsO4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsO4ActionPerformed
+
+    private void BtnConsO6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsO6ActionPerformed
+
+    private void BtnConsO8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO8ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsO8ActionPerformed
+
+    private void BtnConsO7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO7ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsO7ActionPerformed
+
+    private void BtnConsO9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO9ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsO9ActionPerformed
+
+    private void BtnConsO5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsO5ActionPerformed
+
+    private void BtnConsO10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnConsO10ActionPerformed
+
+    private void BtnReiniciarOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReiniciarOActionPerformed
+        // TODO add your handling code here:
+        posm = 0;
+        JOptionPane.showMessageDialog(null, "ArrayList reiniciado com sucesso!!");
+    }//GEN-LAST:event_BtnReiniciarOActionPerformed
+
+    private void BtnImprimirOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnImprimirOActionPerformed
+        Iterator<Onibus> iterator = onibus.iterator();
+            while(iterator.hasNext()){
+                Onibus oni = new Onibus();
+                oni = iterator.next();
+                oni.imprimir();
+            }
+    }//GEN-LAST:event_BtnImprimirOActionPerformed
+
+    private void BtnDesOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDesOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnDesOActionPerformed
+
+    private void BtnAcelOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAcelOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BtnAcelOActionPerformed
+
+    private void BtnEsqOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEsqOActionPerformed
+        // TODO add your handling code here:
+        oni.virarEsquerda();
+    }//GEN-LAST:event_BtnEsqOActionPerformed
+
+    private void BtnDirOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDirOActionPerformed
+        // TODO add your handling code here:
+        oni.virarDireita();
+    }//GEN-LAST:event_BtnDirOActionPerformed
+
+    private void BtnFrearOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnFrearOActionPerformed
+        // TODO add your handling code here:
+        oni.frear();
+    }//GEN-LAST:event_BtnFrearOActionPerformed
+
+    private void TxtMotoOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtMotoOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtMotoOActionPerformed
+
+    private void TxtPropOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtPropOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtPropOActionPerformed
+
+    private void TxtNumOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtNumOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtNumOActionPerformed
+
+    private void TxtPrecoOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtPrecoOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtPrecoOActionPerformed
+
+    private void TxtModeloO2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtModeloO2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtModeloO2ActionPerformed
+
+    private void TxtMarcaO2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtMarcaO2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtMarcaO2ActionPerformed
+
+    private void TxtCombusOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtCombusOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtCombusOActionPerformed
+
+    private void TxtRpmMaxOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtRpmMaxOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtRpmMaxOActionPerformed
+
+    private void TxtRpmOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtRpmOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtRpmOActionPerformed
+
+    private void TxtModeloOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtModeloOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtModeloOActionPerformed
+
+    private void TxtMarcaOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtMarcaOActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_TxtMarcaOActionPerformed
+
+    private void jMenu1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu1MouseClicked
+        // TODO add your handling code here:
+        JOptionPane.showMessageDialog(null, "Gabarito elaborado por Thiago Alves e Bian Medeiros - Segunda 7:30 à 12:40");
+    }//GEN-LAST:event_jMenu1MouseClicked
+
+    private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
+        // TODO add your handling code here:
+        int op = JOptionPane.showConfirmDialog(null, "Deseja mesmo sair?");
+        if(op == 0){
+            System.exit(0);
+        } else {            
+        }
+    }//GEN-LAST:event_jMenu2MouseClicked
 
     /**
      * @param args the command line arguments
@@ -349,6 +1964,9 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton BtnAcelC1;
+    private javax.swing.JButton BtnAcelM;
+    private javax.swing.JButton BtnAcelO;
     private javax.swing.JButton BtnCons10;
     private javax.swing.JButton BtnCons2;
     private javax.swing.JButton BtnCons3;
@@ -358,21 +1976,151 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JButton BtnCons7;
     private javax.swing.JButton BtnCons8;
     private javax.swing.JButton BtnCons9;
+    private javax.swing.JButton BtnConsC10;
+    private javax.swing.JButton BtnConsC2;
+    private javax.swing.JButton BtnConsC3;
+    private javax.swing.JButton BtnConsC4;
+    private javax.swing.JButton BtnConsC5;
+    private javax.swing.JButton BtnConsC6;
+    private javax.swing.JButton BtnConsC7;
+    private javax.swing.JButton BtnConsC8;
+    private javax.swing.JButton BtnConsC9;
+    private javax.swing.JButton BtnConsM10;
+    private javax.swing.JButton BtnConsM2;
+    private javax.swing.JButton BtnConsM3;
+    private javax.swing.JButton BtnConsM4;
+    private javax.swing.JButton BtnConsM5;
+    private javax.swing.JButton BtnConsM6;
+    private javax.swing.JButton BtnConsM7;
+    private javax.swing.JButton BtnConsM8;
+    private javax.swing.JButton BtnConsM9;
+    private javax.swing.JButton BtnConsO10;
+    private javax.swing.JButton BtnConsO2;
+    private javax.swing.JButton BtnConsO3;
+    private javax.swing.JButton BtnConsO4;
+    private javax.swing.JButton BtnConsO5;
+    private javax.swing.JButton BtnConsO6;
+    private javax.swing.JButton BtnConsO7;
+    private javax.swing.JButton BtnConsO8;
+    private javax.swing.JButton BtnConsO9;
+    private javax.swing.JButton BtnDesC;
+    private javax.swing.JButton BtnDesM;
+    private javax.swing.JButton BtnDesO;
+    private javax.swing.JButton BtnDirC;
+    private javax.swing.JButton BtnDirM;
+    private javax.swing.JButton BtnDirO;
+    private javax.swing.JButton BtnEsqC;
+    private javax.swing.JButton BtnEsqM;
+    private javax.swing.JButton BtnEsqO;
+    private javax.swing.JButton BtnFrearC;
+    private javax.swing.JButton BtnFrearM;
+    private javax.swing.JButton BtnFrearO;
     private javax.swing.JButton BtnImprimir;
+    private javax.swing.JButton BtnImprimirC;
+    private javax.swing.JButton BtnImprimirM;
+    private javax.swing.JButton BtnImprimirO;
     private javax.swing.JButton BtnInserir;
+    private javax.swing.JButton BtnInserirC;
+    private javax.swing.JButton BtnInserirM;
+    private javax.swing.JButton BtnInserirO;
+    private javax.swing.JButton BtnReiniciar;
+    private javax.swing.JButton BtnReiniciarC;
+    private javax.swing.JButton BtnReiniciarM;
+    private javax.swing.JButton BtnReiniciarO;
     private javax.swing.JTabbedPane JPaneMotor;
+    private javax.swing.JPanel PnlMotorC;
+    private javax.swing.JPanel PnlMotorC1;
+    private javax.swing.JPanel PnlMotorC2;
     private javax.swing.JTextField TxtCombus;
+    private javax.swing.JTextField TxtCombusC;
+    private javax.swing.JTextField TxtCombusM;
+    private javax.swing.JTextField TxtCombusO;
     private javax.swing.JButton TxtLimpar;
+    private javax.swing.JButton TxtLimparC;
+    private javax.swing.JButton TxtLimparM;
+    private javax.swing.JButton TxtLimparO;
     private javax.swing.JTextField TxtMarca;
+    private javax.swing.JTextField TxtMarcaC;
+    private javax.swing.JTextField TxtMarcaC1;
+    private javax.swing.JTextField TxtMarcaM;
+    private javax.swing.JTextField TxtMarcaM2;
+    private javax.swing.JTextField TxtMarcaO;
+    private javax.swing.JTextField TxtMarcaO2;
     private javax.swing.JTextField TxtModelo;
+    private javax.swing.JTextField TxtModeloC;
+    private javax.swing.JTextField TxtModeloC1;
+    private javax.swing.JTextField TxtModeloM;
+    private javax.swing.JTextField TxtModeloM2;
+    private javax.swing.JTextField TxtModeloO;
+    private javax.swing.JTextField TxtModeloO2;
+    private javax.swing.JTextField TxtMotoO;
+    private javax.swing.JTextField TxtNumC;
+    private javax.swing.JTextField TxtNumM;
+    private javax.swing.JTextField TxtNumO;
+    private javax.swing.JTextField TxtPrecoC;
+    private javax.swing.JTextField TxtPrecoM;
+    private javax.swing.JTextField TxtPrecoO;
+    private javax.swing.JTextField TxtPropC;
+    private javax.swing.JTextField TxtPropM;
+    private javax.swing.JTextField TxtPropO;
     private javax.swing.JTextField TxtRpm;
+    private javax.swing.JTextField TxtRpmC;
+    private javax.swing.JTextField TxtRpmM;
     private javax.swing.JTextField TxtRpmMax;
+    private javax.swing.JTextField TxtRpmMaxC;
+    private javax.swing.JTextField TxtRpmMaxM;
+    private javax.swing.JTextField TxtRpmMaxO;
+    private javax.swing.JTextField TxtRpmO;
+    private javax.swing.JTextField TxtVolBgM;
+    private javax.swing.JTextField TxtVolC;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
     // End of variables declaration//GEN-END:variables
 }

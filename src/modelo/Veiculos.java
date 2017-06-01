@@ -10,17 +10,17 @@ package modelo;
  */
 public abstract class Veiculos implements Interface{
 
-    private int NumeroPassageiros;
+    private int numeroPassageiros;
     private double preco;
     private String proprietario, marca, modelo;
     private Motor motor;
 
     public int getNumeroPassageiros() {
-        return NumeroPassageiros;
+        return numeroPassageiros;
     }
 
     public void setNumeroPassageiros(int NumeroPassageiros) {
-        this.NumeroPassageiros = NumeroPassageiros;
+        this.numeroPassageiros = NumeroPassageiros;
     }
 
     public double getPreco() {
@@ -75,6 +75,19 @@ public abstract class Veiculos implements Interface{
         public void virarEsquerda();
     }
     
+     public void acelerar() {
+       if(motor.getRpm() < motor.getRpmMaximo()){
+        int resu = motor.getRpm() + 100;
+         motor.setRpm(resu);
+       }
+    } 
+      public void desacelerar() {
+       if(motor.getRpm() >0 ){
+        int resu = motor.getRpm() - 100;
+         motor.setRpm(resu);
+       }
+    }    
+    
     public void getTempoMaxUso(){
         System.out.println("O tempo máximo de uso é: " + tempoMaxUso);
     }
@@ -85,16 +98,16 @@ public abstract class Veiculos implements Interface{
 
     public Veiculos() {}
 
-    public Veiculos(int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor) {
-        this.NumeroPassageiros = NumeroPassageiros;
+    public Veiculos(int numeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor) {
+        this.numeroPassageiros = numeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
         this.modelo = modelo;
         this.motor = motor;
     }
-    public Veiculos(int NumeroPassageiros, double preco, String proprietario, String marca, Motor motor, String modelo) {
-        this.NumeroPassageiros = NumeroPassageiros;
+    public Veiculos(int numeroPassageiros, double preco, String proprietario, String marca, Motor motor, String modelo) {
+        this.numeroPassageiros = numeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -102,7 +115,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(int NumeroPassageiros, String proprietario, String marca, double preco, String modelo, Motor motor) {
-        this.NumeroPassageiros = NumeroPassageiros;
+        this.numeroPassageiros = numeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -110,7 +123,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(int NumeroPassageiros, String modelo, double preco, String proprietario, String marca, Motor motor) {
-        this.NumeroPassageiros = NumeroPassageiros;
+        this.numeroPassageiros = numeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -118,7 +131,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(int NumeroPassageiros, String proprietario, String marca, String modelo, double preco, Motor motor) {
-        this.NumeroPassageiros = NumeroPassageiros;
+        this.numeroPassageiros = numeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -126,7 +139,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(int NumeroPassageiros, String proprietario, String marca, String modelo, Motor motor, double preco) {
-        this.NumeroPassageiros = NumeroPassageiros;
+        this.numeroPassageiros = numeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -134,7 +147,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(double preco, int NumeroPassageiros,String proprietario, String marca, String modelo, Motor motor) {
-        this.NumeroPassageiros = NumeroPassageiros;
+        this.numeroPassageiros = numeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -142,7 +155,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(double preco, String proprietario, int NumeroPassageiros, String marca, String modelo, Motor motor) {
-        this.NumeroPassageiros = NumeroPassageiros;
+        this.numeroPassageiros = numeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -150,7 +163,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(double preco, String proprietario, String marca, String modelo, int NumeroPassageiros, Motor motor) {
-        this.NumeroPassageiros = NumeroPassageiros;
+        this.numeroPassageiros = numeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -159,11 +172,18 @@ public abstract class Veiculos implements Interface{
     }
     
     public void cadastrar(int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor){
-        this.NumeroPassageiros = NumeroPassageiros;
+        this.numeroPassageiros = numeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
         this.modelo = modelo;
         this.motor = motor;
     }
+    
+    public void imprimir(){
+    System.out.println("O Núm de passageiros é: "+numeroPassageiros+"\nO preço é: "+preco+"\nO proprietário é: "+proprietario
+    +"\nMarca: "+marca+"\nO modelo é: "+modelo+"\n");
+    System.out.println("Detalhes do motor: A marca é: "+motor.marca+"\nO modelo é: "+motor.modelo+"\nRPM é: "+motor.rpm+"\nRPM máximo é: "+motor.rpmMaximo+"\nO tipo do combustível é: "+motor.tipoCombustivel);
+    }
+    
 }
