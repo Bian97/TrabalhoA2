@@ -18,19 +18,21 @@ import modelo.Onibus;
  * @author DrGreend
  */
 public class Principal extends javax.swing.JFrame {
-        int max = 2;
-        ArrayList<Motor> motor = new ArrayList<Motor>(max);
-        Motor mt = new Motor();
-        int pos = 0;
-        ArrayList<Carro> carro = new ArrayList<Carro>(max);
-        Carro cr = new Carro();
-        int posc = 0;
-        ArrayList<Moto> moto = new ArrayList<Moto>(max);
-        Moto mto = new Moto();
-        int posm = 0;
-        ArrayList<Onibus> onibus = new ArrayList<Onibus>(max);
-        Onibus oni = new Onibus();
-        int poso = 0;
+
+    int max = 2;
+    ArrayList<Motor> motor = new ArrayList<Motor>(max);
+    Motor mt = new Motor();
+    int pos = 0;
+    ArrayList<Carro> carro = new ArrayList<Carro>(max);
+    Carro cr = new Carro();
+    int posc = 0;
+    ArrayList<Moto> moto = new ArrayList<Moto>(max);
+    Moto mto = new Moto();
+    int posm = 0;
+    ArrayList<Onibus> onibus = new ArrayList<Onibus>(max);
+    Onibus oni = new Onibus();
+    int poso = 0;
+
     /**
      * Creates new form Principal
      */
@@ -1354,7 +1356,7 @@ public class Principal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    
+
     private void TxtMarcaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtMarcaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_TxtMarcaActionPerformed
@@ -1377,20 +1379,20 @@ public class Principal extends javax.swing.JFrame {
 
     private void BtnInserirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInserirActionPerformed
         // TODO add your handling code here:        
-        try{
-            if(pos < max){
+        try {
+            if (pos < max) {
                 Motor mt = new Motor();
                 mt.cadastrar(TxtMarca.getText(), TxtModelo.getText(), TxtCombus.getText(), Integer.parseInt(TxtRpm.getText()), Integer.parseInt(TxtRpmMax.getText()));
                 motor.add(mt);
-                if(mt != null){
-                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!","Motor", JOptionPane.INFORMATION_MESSAGE);
+                if (mt != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Motor", JOptionPane.INFORMATION_MESSAGE);
                 }
-             pos++;
+                pos++;
             } else {
                 JOptionPane.showMessageDialog(null, "Está cheio!");
             }
-        } catch(Exception e){
-            JOptionPane.showMessageDialog(null , "Erro!! " +e);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
         }
     }//GEN-LAST:event_BtnInserirActionPerformed
 
@@ -1400,44 +1402,180 @@ public class Principal extends javax.swing.JFrame {
         TxtModelo.setText("");
         TxtCombus.setText("");
         TxtRpm.setText("");
-        TxtRpmMax.setText(""); 
+        TxtRpmMax.setText("");
     }//GEN-LAST:event_TxtLimparActionPerformed
 
     private void BtnCons2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCons2ActionPerformed
         // TODO add your handling code here:
-        
+        try {
+            if (pos < max) {
+                Motor mt = new Motor();
+                mt.cadastrar("string", "string", "string", Integer.parseInt("1"), Integer.parseInt("1"));
+                motor.add(mt);
+                if (mt != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Motor", JOptionPane.INFORMATION_MESSAGE);
+                }
+                pos++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnCons2ActionPerformed
 
     private void BtnCons3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCons3ActionPerformed
         // TODO add your handling code here:
+        try {
+            if (pos < max) {
+                Motor mt = new Motor();
+                mt.cadastrar("string", "string", "string", Integer.parseInt("1"), Integer.parseInt("1"));
+                motor.add(mt);
+                if (mt != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Motor", JOptionPane.INFORMATION_MESSAGE);
+                }
+                pos++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
+
     }//GEN-LAST:event_BtnCons3ActionPerformed
 
     private void BtnCons4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCons4ActionPerformed
         // TODO add your handling code here:
+        try {
+            if (pos < max) {
+                Motor mt = new Motor();
+                mt.cadastrar("string", "string", "string", Integer.parseInt("1"), Integer.parseInt("1"));
+                motor.add(mt);
+                if (mt != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Motor", JOptionPane.INFORMATION_MESSAGE);
+                }
+                pos++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
+
     }//GEN-LAST:event_BtnCons4ActionPerformed
 
     private void BtnCons6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCons6ActionPerformed
         // TODO add your handling code here:
+        try {
+            if (pos < max) {
+                Motor mt = new Motor();
+                mt.cadastrar("string", "string", "string", Integer.parseInt("1"), Integer.parseInt("1"));
+                motor.add(mt);
+                if (mt != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Motor", JOptionPane.INFORMATION_MESSAGE);
+                }
+                pos++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnCons6ActionPerformed
 
     private void BtnCons8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCons8ActionPerformed
         // TODO add your handling code here:
+        try {
+            if (pos < max) {
+                Motor mt = new Motor();
+                mt.cadastrar("string", "string", "string", Integer.parseInt("1"), Integer.parseInt("1"));
+                motor.add(mt);
+                if (mt != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Motor", JOptionPane.INFORMATION_MESSAGE);
+                }
+                pos++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnCons8ActionPerformed
 
     private void BtnCons7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCons7ActionPerformed
         // TODO add your handling code here:
+        try {
+            if (pos < max) {
+                Motor mt = new Motor();
+                mt.cadastrar("string", "string", "string", Integer.parseInt("1"), Integer.parseInt("1"));
+                motor.add(mt);
+                if (mt != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Motor", JOptionPane.INFORMATION_MESSAGE);
+                }
+                pos++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnCons7ActionPerformed
 
     private void BtnCons9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCons9ActionPerformed
         // TODO add your handling code here:
+        try {
+            if (pos < max) {
+                Motor mt = new Motor();
+                mt.cadastrar("string", "string", "string", Integer.parseInt("1"), Integer.parseInt("1"));
+                motor.add(mt);
+                if (mt != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Motor", JOptionPane.INFORMATION_MESSAGE);
+                }
+                pos++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnCons9ActionPerformed
 
     private void BtnCons5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCons5ActionPerformed
         // TODO add your handling code here:
+        try {
+            if (pos < max) {
+                Motor mt = new Motor();
+                mt.cadastrar("string", "string", "string", Integer.parseInt("1"), Integer.parseInt("1"));
+                motor.add(mt);
+                if (mt != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Motor", JOptionPane.INFORMATION_MESSAGE);
+                }
+                pos++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnCons5ActionPerformed
 
     private void BtnCons10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnCons10ActionPerformed
         // TODO add your handling code here:
+        try {
+            if (pos < max) {
+                Motor mt = new Motor();
+                mt.cadastrar("string", "string", "string", Integer.parseInt("1"), Integer.parseInt("1"));
+                motor.add(mt);
+                if (mt != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Motor", JOptionPane.INFORMATION_MESSAGE);
+                }
+                pos++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnCons10ActionPerformed
 
     private void BtnReiniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReiniciarActionPerformed
@@ -1449,11 +1587,11 @@ public class Principal extends javax.swing.JFrame {
     private void BtnImprimirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnImprimirActionPerformed
         // TODO add your handling code here:
         Iterator<Motor> iterator = motor.iterator();
-            while(iterator.hasNext()){
-                Motor motor = new Motor();
-                motor = iterator.next();
-                motor.imprimir();
-            }
+        while (iterator.hasNext()) {
+            Motor motor = new Motor();
+            motor = iterator.next();
+            motor.imprimir();
+        }
     }//GEN-LAST:event_BtnImprimirActionPerformed
 
     private void TxtModeloCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtModeloCActionPerformed
@@ -1473,8 +1611,8 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_TxtCombusCActionPerformed
 
     private void BtnInserirCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInserirCActionPerformed
-         try{
-            if(posc < max){
+        try {
+            if (posc < max) {
                 Carro cr = new Carro();
                 //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
                 Motor mt1 = new Motor();
@@ -1482,70 +1620,259 @@ public class Principal extends javax.swing.JFrame {
                 mt1.setModelo(TxtModeloC.getText());
                 mt1.setRpm(Integer.parseInt(TxtRpmC.getText()));
                 mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxC.getText()));
-                
-                cr.cadastrar(Integer.parseInt(TxtNumC.getText()),Double.parseDouble(TxtPrecoC.getText()),TxtPropC.getText(), TxtMarcaC1.getText(),TxtModeloC1.getText(),mt1,Integer.parseInt(TxtVolC.getText()));
+
+                cr.cadastrar(Integer.parseInt(TxtNumC.getText()), Double.parseDouble(TxtPrecoC.getText()), TxtPropC.getText(), TxtMarcaC1.getText(), TxtModeloC1.getText(), mt1, Integer.parseInt(TxtVolC.getText()));
                 carro.add(cr);
-                if(cr != null){
-                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!","Carro", JOptionPane.INFORMATION_MESSAGE);
+                if (cr != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Carro", JOptionPane.INFORMATION_MESSAGE);
                 }
-             posc++;
+                posc++;
             } else {
                 JOptionPane.showMessageDialog(null, "Está cheio!");
             }
-        } catch(Exception e){
-            JOptionPane.showMessageDialog(null , "Erro!! " +e);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
         }
     }//GEN-LAST:event_BtnInserirCActionPerformed
 
     private void TxtLimparCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtLimparCActionPerformed
         // TODO add your handling code here:
-                TxtMarcaC.setText("");
-                TxtModeloC.setText("");
-                TxtRpmC.setText("");
-                TxtRpmMaxC.setText("");                
-                TxtNumC.setText("");
-                TxtPrecoC.setText("");
-                TxtPropC.setText("");
-                TxtMarcaC1.setText("");
-                TxtModeloC1.setText("");
-                TxtVolC.setText("");
- 
+        TxtMarcaC.setText("");
+        TxtModeloC.setText("");
+        TxtRpmC.setText("");
+        TxtRpmMaxC.setText("");
+        TxtNumC.setText("");
+        TxtPrecoC.setText("");
+        TxtPropC.setText("");
+        TxtMarcaC1.setText("");
+        TxtModeloC1.setText("");
+        TxtVolC.setText("");
+
     }//GEN-LAST:event_TxtLimparCActionPerformed
 
     private void BtnConsC2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC2ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posc < max) {
+                Carro cr = new Carro();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaC.getText());
+                mt1.setModelo(TxtModeloC.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmC.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxC.getText()));
+
+                cr.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt("1"));
+                carro.add(cr);
+                if (cr != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Carro", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posc++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }// TODO add your handling code here:
     }//GEN-LAST:event_BtnConsC2ActionPerformed
 
     private void BtnConsC3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC3ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posc < max) {
+                Carro cr = new Carro();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaC.getText());
+                mt1.setModelo(TxtModeloC.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmC.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxC.getText()));
+
+                cr.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt("1"));
+                carro.add(cr);
+                if (cr != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Carro", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posc++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsC3ActionPerformed
 
     private void BtnConsC4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC4ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posc < max) {
+                Carro cr = new Carro();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaC.getText());
+                mt1.setModelo(TxtModeloC.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmC.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxC.getText()));
+
+                cr.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt("1"));
+                carro.add(cr);
+                if (cr != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Carro", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posc++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsC4ActionPerformed
 
     private void BtnConsC6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC6ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posc < max) {
+                Carro cr = new Carro();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaC.getText());
+                mt1.setModelo(TxtModeloC.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmC.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxC.getText()));
+
+                cr.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt("1"));
+                carro.add(cr);
+                if (cr != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Carro", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posc++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsC6ActionPerformed
 
     private void BtnConsC8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC8ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posc < max) {
+                Carro cr = new Carro();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaC.getText());
+                mt1.setModelo(TxtModeloC.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmC.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxC.getText()));
+
+                cr.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt("1"));
+                carro.add(cr);
+                if (cr != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Carro", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posc++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsC8ActionPerformed
 
     private void BtnConsC7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC7ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posc < max) {
+                Carro cr = new Carro();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaC.getText());
+                mt1.setModelo(TxtModeloC.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmC.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxC.getText()));
+
+                cr.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt("1"));
+                carro.add(cr);
+                if (cr != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Carro", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posc++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsC7ActionPerformed
 
     private void BtnConsC9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC9ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posc < max) {
+                Carro cr = new Carro();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaC.getText());
+                mt1.setModelo(TxtModeloC.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmC.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxC.getText()));
+
+                cr.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt("1"));
+                carro.add(cr);
+                if (cr != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Carro", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posc++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsC9ActionPerformed
 
     private void BtnConsC5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC5ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posc < max) {
+                Carro cr = new Carro();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaC.getText());
+                mt1.setModelo(TxtModeloC.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmC.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxC.getText()));
+
+                cr.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt("1"));
+                carro.add(cr);
+                if (cr != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Carro", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posc++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsC5ActionPerformed
 
     private void BtnConsC10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsC10ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posc < max) {
+                Carro cr = new Carro();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaC.getText());
+                mt1.setModelo(TxtModeloC.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmC.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxC.getText()));
+
+                cr.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt("1"));
+                carro.add(cr);
+                if (cr != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Carro", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posc++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsC10ActionPerformed
 
     private void BtnReiniciarCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReiniciarCActionPerformed
@@ -1556,12 +1883,12 @@ public class Principal extends javax.swing.JFrame {
 
     private void BtnImprimirCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnImprimirCActionPerformed
         // TODO add your handling code here:
-          Iterator<Carro> iterator = carro.iterator();
-            while(iterator.hasNext()){
-                Carro carr = new Carro();
-                carr = iterator.next();
-                carr.imprimir();
-            }
+        Iterator<Carro> iterator = carro.iterator();
+        while (iterator.hasNext()) {
+            Carro carr = new Carro();
+            carr = iterator.next();
+            carr.imprimir();
+        }
     }//GEN-LAST:event_BtnImprimirCActionPerformed
 
     private void TxtPropCActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtPropCActionPerformed
@@ -1654,8 +1981,8 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_TxtModeloM2ActionPerformed
 
     private void BtnInserirMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInserirMActionPerformed
-       try{
-            if(posm < max){
+        try {
+            if (posm < max) {
                 Moto mto = new Moto();
                 //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
                 Motor mt1 = new Motor();
@@ -1663,70 +1990,259 @@ public class Principal extends javax.swing.JFrame {
                 mt1.setModelo(TxtModeloM.getText());
                 mt1.setRpm(Integer.parseInt(TxtRpmM.getText()));
                 mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxM.getText()));
-                
-                mto.cadastrar(Integer.parseInt(TxtNumM.getText()),Double.parseDouble(TxtPrecoM.getText()),TxtPropM.getText(), TxtMarcaM2.getText(),TxtModeloM2.getText(),mt1,Integer.parseInt(TxtVolBgM.getText()));
+
+                mto.cadastrar(Integer.parseInt(TxtNumM.getText()), Double.parseDouble(TxtPrecoM.getText()), TxtPropM.getText(), TxtMarcaM2.getText(), TxtModeloM2.getText(), mt1, Integer.parseInt(TxtVolBgM.getText()));
                 moto.add(mto);
-                if(mto != null){
-                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!","Moto", JOptionPane.INFORMATION_MESSAGE);
+                if (mto != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Moto", JOptionPane.INFORMATION_MESSAGE);
                 }
-             posm++;
+                posm++;
             } else {
                 JOptionPane.showMessageDialog(null, "Está cheio!");
             }
-        } catch(Exception e){
-            JOptionPane.showMessageDialog(null , "Erro!! " +e);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
         }
     }//GEN-LAST:event_BtnInserirMActionPerformed
 
     private void TxtLimparMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TxtLimparMActionPerformed
         // TODO add your handling code here:
-                TxtMarcaM.setText("");
-                TxtModeloM.setText("");
-                TxtRpmM.setText("");
-                TxtRpmMaxM.setText("");                
-                TxtNumM.setText("");
-                TxtPrecoM.setText("");
-                TxtPropM.setText("");
-                TxtMarcaM2.setText("");
-                TxtModeloM2.setText("");
-                TxtVolBgM.setText("");
-              
+        TxtMarcaM.setText("");
+        TxtModeloM.setText("");
+        TxtRpmM.setText("");
+        TxtRpmMaxM.setText("");
+        TxtNumM.setText("");
+        TxtPrecoM.setText("");
+        TxtPropM.setText("");
+        TxtMarcaM2.setText("");
+        TxtModeloM2.setText("");
+        TxtVolBgM.setText("");
+
     }//GEN-LAST:event_TxtLimparMActionPerformed
 
     private void BtnConsM2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM2ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posm < max) {
+                Moto mto = new Moto();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaM.getText());
+                mt1.setModelo(TxtModeloM.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmM.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxM.getText()));
+
+                mto.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt(TxtVolBgM.getText()));
+                moto.add(mto);
+                if (mto != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Moto", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posm++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsM2ActionPerformed
 
     private void BtnConsM3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM3ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posm < max) {
+                Moto mto = new Moto();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaM.getText());
+                mt1.setModelo(TxtModeloM.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmM.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxM.getText()));
+
+                mto.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt(TxtVolBgM.getText()));
+                moto.add(mto);
+                if (mto != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Moto", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posm++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsM3ActionPerformed
 
     private void BtnConsM4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM4ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posm < max) {
+                Moto mto = new Moto();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaM.getText());
+                mt1.setModelo(TxtModeloM.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmM.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxM.getText()));
+
+                mto.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt(TxtVolBgM.getText()));
+                moto.add(mto);
+                if (mto != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Moto", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posm++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsM4ActionPerformed
 
     private void BtnConsM6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM6ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posm < max) {
+                Moto mto = new Moto();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaM.getText());
+                mt1.setModelo(TxtModeloM.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmM.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxM.getText()));
+
+                mto.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt(TxtVolBgM.getText()));
+                moto.add(mto);
+                if (mto != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Moto", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posm++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsM6ActionPerformed
 
     private void BtnConsM8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM8ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posm < max) {
+                Moto mto = new Moto();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaM.getText());
+                mt1.setModelo(TxtModeloM.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmM.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxM.getText()));
+
+                mto.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt(TxtVolBgM.getText()));
+                moto.add(mto);
+                if (mto != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Moto", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posm++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsM8ActionPerformed
 
     private void BtnConsM7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM7ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posm < max) {
+                Moto mto = new Moto();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaM.getText());
+                mt1.setModelo(TxtModeloM.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmM.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxM.getText()));
+
+                mto.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt(TxtVolBgM.getText()));
+                moto.add(mto);
+                if (mto != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Moto", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posm++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsM7ActionPerformed
 
     private void BtnConsM9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM9ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posm < max) {
+                Moto mto = new Moto();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaM.getText());
+                mt1.setModelo(TxtModeloM.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmM.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxM.getText()));
+
+                mto.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt(TxtVolBgM.getText()));
+                moto.add(mto);
+                if (mto != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Moto", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posm++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsM9ActionPerformed
 
     private void BtnConsM5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM5ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posm < max) {
+                Moto mto = new Moto();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaM.getText());
+                mt1.setModelo(TxtModeloM.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmM.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxM.getText()));
+
+                mto.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt(TxtVolBgM.getText()));
+                moto.add(mto);
+                if (mto != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Moto", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posm++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsM5ActionPerformed
 
     private void BtnConsM10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsM10ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (posm < max) {
+                Moto mto = new Moto();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaM.getText());
+                mt1.setModelo(TxtModeloM.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmM.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxM.getText()));
+
+                mto.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, Integer.parseInt(TxtVolBgM.getText()));
+                moto.add(mto);
+                if (mto != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Moto", JOptionPane.INFORMATION_MESSAGE);
+                }
+                posm++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsM10ActionPerformed
 
     private void BtnReiniciarMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReiniciarMActionPerformed
@@ -1737,11 +2253,11 @@ public class Principal extends javax.swing.JFrame {
 
     private void BtnImprimirMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnImprimirMActionPerformed
         Iterator<Moto> iterator = moto.iterator();
-            while(iterator.hasNext()){
-                Moto mot = new Moto();
-                mot = iterator.next();
-                mot.imprimir();
-            }
+        while (iterator.hasNext()) {
+            Moto mot = new Moto();
+            mot = iterator.next();
+            mot.imprimir();
+        }
     }//GEN-LAST:event_BtnImprimirMActionPerformed
 
     private void BtnDesMActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDesMActionPerformed
@@ -1768,8 +2284,8 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_BtnFrearMActionPerformed
 
     private void BtnInserirOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnInserirOActionPerformed
-        try{
-            if(poso < max){
+        try {
+            if (poso < max) {
                 Onibus oni = new Onibus();
                 //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
                 Motor mt1 = new Motor();
@@ -1777,18 +2293,18 @@ public class Principal extends javax.swing.JFrame {
                 mt1.setModelo(TxtModeloO.getText());
                 mt1.setRpm(Integer.parseInt(TxtRpmO.getText()));
                 mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxO.getText()));
-                
-                oni.cadastrar(Integer.parseInt(TxtNumM.getText()),Double.parseDouble(TxtPrecoM.getText()),TxtPropM.getText(), TxtMarcaM2.getText(),TxtModeloM2.getText(),mt1,TxtMotoO.getText());
+
+                oni.cadastrar(Integer.parseInt(TxtNumM.getText()), Double.parseDouble(TxtPrecoM.getText()), TxtPropM.getText(), TxtMarcaM2.getText(), TxtModeloM2.getText(), mt1, TxtMotoO.getText());
                 onibus.add(oni);
-                if(oni != null){
-                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!","Ônibus", JOptionPane.INFORMATION_MESSAGE);
+                if (oni != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Ônibus", JOptionPane.INFORMATION_MESSAGE);
                 }
-             poso++;
+                poso++;
             } else {
                 JOptionPane.showMessageDialog(null, "Está cheio!");
             }
-        } catch(Exception e){
-            JOptionPane.showMessageDialog(null , "Erro!! " +e);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
         }
     }//GEN-LAST:event_BtnInserirOActionPerformed
 
@@ -1797,39 +2313,228 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_TxtLimparOActionPerformed
 
     private void BtnConsO2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO2ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (poso < max) {
+                Onibus oni = new Onibus();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaO.getText());
+                mt1.setModelo(TxtModeloO.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmO.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxO.getText()));
+
+                oni.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, TxtMotoO.getText());
+                onibus.add(oni);
+                if (oni != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Ônibus", JOptionPane.INFORMATION_MESSAGE);
+                }
+                poso++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsO2ActionPerformed
 
     private void BtnConsO3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO3ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (poso < max) {
+                Onibus oni = new Onibus();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaO.getText());
+                mt1.setModelo(TxtModeloO.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmO.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxO.getText()));
+
+                oni.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, TxtMotoO.getText());
+                onibus.add(oni);
+                if (oni != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Ônibus", JOptionPane.INFORMATION_MESSAGE);
+                }
+                poso++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsO3ActionPerformed
 
     private void BtnConsO4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO4ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (poso < max) {
+                Onibus oni = new Onibus();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaO.getText());
+                mt1.setModelo(TxtModeloO.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmO.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxO.getText()));
+
+                oni.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, TxtMotoO.getText());
+                onibus.add(oni);
+                if (oni != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Ônibus", JOptionPane.INFORMATION_MESSAGE);
+                }
+                poso++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsO4ActionPerformed
 
     private void BtnConsO6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO6ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (poso < max) {
+                Onibus oni = new Onibus();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaO.getText());
+                mt1.setModelo(TxtModeloO.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmO.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxO.getText()));
+
+                oni.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, TxtMotoO.getText());
+                onibus.add(oni);
+                if (oni != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Ônibus", JOptionPane.INFORMATION_MESSAGE);
+                }
+                poso++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsO6ActionPerformed
 
     private void BtnConsO8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO8ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (poso < max) {
+                Onibus oni = new Onibus();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaO.getText());
+                mt1.setModelo(TxtModeloO.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmO.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxO.getText()));
+
+                oni.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, TxtMotoO.getText());
+                onibus.add(oni);
+                if (oni != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Ônibus", JOptionPane.INFORMATION_MESSAGE);
+                }
+                poso++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsO8ActionPerformed
 
     private void BtnConsO7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO7ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (poso < max) {
+                Onibus oni = new Onibus();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaO.getText());
+                mt1.setModelo(TxtModeloO.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmO.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxO.getText()));
+
+                oni.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, TxtMotoO.getText());
+                onibus.add(oni);
+                if (oni != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Ônibus", JOptionPane.INFORMATION_MESSAGE);
+                }
+                poso++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsO7ActionPerformed
 
     private void BtnConsO9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO9ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (poso < max) {
+                Onibus oni = new Onibus();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaO.getText());
+                mt1.setModelo(TxtModeloO.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmO.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxO.getText()));
+
+                oni.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, TxtMotoO.getText());
+                onibus.add(oni);
+                if (oni != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Ônibus", JOptionPane.INFORMATION_MESSAGE);
+                }
+                poso++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsO9ActionPerformed
 
     private void BtnConsO5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO5ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (poso < max) {
+                Onibus oni = new Onibus();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaO.getText());
+                mt1.setModelo(TxtModeloO.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmO.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxO.getText()));
+
+                oni.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, TxtMotoO.getText());
+                onibus.add(oni);
+                if (oni != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Ônibus", JOptionPane.INFORMATION_MESSAGE);
+                }
+                poso++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsO5ActionPerformed
 
     private void BtnConsO10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnConsO10ActionPerformed
-        // TODO add your handling code here:
+        try {
+            if (poso < max) {
+                Onibus oni = new Onibus();
+                //int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeMala
+                Motor mt1 = new Motor();
+                mt1.setMarca(TxtMarcaO.getText());
+                mt1.setModelo(TxtModeloO.getText());
+                mt1.setRpm(Integer.parseInt(TxtRpmO.getText()));
+                mt1.setRpmMaximo(Integer.parseInt(TxtRpmMaxO.getText()));
+
+                oni.cadastrar(Integer.parseInt("1"), Double.parseDouble("1.5"), "string", "string", "string", mt1, TxtMotoO.getText());
+                onibus.add(oni);
+                if (oni != null) {
+                    JOptionPane.showMessageDialog(null, "Inserido com sucesso!!", "Ônibus", JOptionPane.INFORMATION_MESSAGE);
+                }
+                poso++;
+            } else {
+                JOptionPane.showMessageDialog(null, "Está cheio!");
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Erro!! " + e);
+        }
     }//GEN-LAST:event_BtnConsO10ActionPerformed
 
     private void BtnReiniciarOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnReiniciarOActionPerformed
@@ -1840,11 +2545,11 @@ public class Principal extends javax.swing.JFrame {
 
     private void BtnImprimirOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnImprimirOActionPerformed
         Iterator<Onibus> iterator = onibus.iterator();
-            while(iterator.hasNext()){
-                Onibus oni = new Onibus();
-                oni = iterator.next();
-                oni.imprimir();
-            }
+        while (iterator.hasNext()) {
+            Onibus oni = new Onibus();
+            oni = iterator.next();
+            oni.imprimir();
+        }
     }//GEN-LAST:event_BtnImprimirOActionPerformed
 
     private void BtnDesOActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDesOActionPerformed
@@ -1922,9 +2627,9 @@ public class Principal extends javax.swing.JFrame {
     private void jMenu2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu2MouseClicked
         // TODO add your handling code here:
         int op = JOptionPane.showConfirmDialog(null, "Deseja mesmo sair?");
-        if(op == 0){
+        if (op == 0) {
             System.exit(0);
-        } else {            
+        } else {
         }
     }//GEN-LAST:event_jMenu2MouseClicked
 

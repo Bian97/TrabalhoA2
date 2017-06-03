@@ -21,31 +21,32 @@ public class Carro extends Veiculos {
         this.volumeMala = volumeMala;
     }
 
-   /* public void acelerar() {
-        Motor m = new Motor(); 
-        m.rpm += 100; 
-    }  */  
+    public void acelerar() {
+        Motor m = new Motor();
+        m.rpm += 100;
+    }
+
     public void desacelerar() {
 
     }
 
     public void virarEsquerda() {
 
-        System.out.println("Carro " +esquerda);
+        System.out.println("Carro " + esquerda);
     }
 
     public void virarDireita() {
 
-        System.out.println("Carro " +direita);
+        System.out.println("Carro " + direita);
     }
 
     public void frear() {
-        System.out.println("Carro " +frear);
+        System.out.println("Carro " + frear);
     }
 
     public Carro() {
     }
-    
+
     public Carro(int volumeMala, int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor) {
         super(NumeroPassageiros, preco, proprietario, marca, modelo, motor);
         this.volumeMala = volumeMala;

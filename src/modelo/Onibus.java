@@ -9,7 +9,7 @@ package modelo;
  *
  * @author DrGreend
  */
-public class Onibus extends Veiculos{
+public class Onibus extends Veiculos {
 
     String motorista;
 
@@ -21,22 +21,33 @@ public class Onibus extends Veiculos{
         this.motorista = motorista;
     }
 
-     public void virarEsquerda() {
+    public void acelerar() {
+        Motor m = new Motor();
+        m.rpm += 50;
+    }
 
-        System.out.println("Ônibus " +esquerda);
+    public void desacelerar() {
+        Motor m = new Motor();
+        m.rpm -= 50;
+    }
+
+    public void virarEsquerda() {
+
+        System.out.println("Ônibus " + esquerda);
     }
 
     public void virarDireita() {
 
-        System.out.println("Ônibus " +direita);
+        System.out.println("Ônibus " + direita);
     }
 
     public void frear() {
-        System.out.println("Ônibus " +frear);
+        System.out.println("Ônibus " + frear);
     }
-    
-    public Onibus(){}
-    
+
+    public Onibus() {
+    }
+
     public Onibus(String motorista, int numeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor) {
         super(numeroPassageiros, preco, proprietario, marca, modelo, motor);
         this.motorista = motorista;
@@ -82,12 +93,12 @@ public class Onibus extends Veiculos{
         this.motorista = motorista;
     }
 
-    public void cadastrar(int numeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, String motorista){
+    public void cadastrar(int numeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, String motorista) {
         super.cadastrar(numeroPassageiros, preco, proprietario, marca, modelo, motor);
         this.motorista = motorista;
     }
-    
-    public void imprimir(){
+
+    public void imprimir() {
         super.imprimir();
         System.out.println("\n O motorista é: " + motorista);
     }
