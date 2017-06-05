@@ -9,7 +9,7 @@ package modelo;
  *
  * @author 20162102326
  */
-public class Moto extends Veiculos{
+public class Moto extends Veiculos {
 
     int volumeBagageiro;
 
@@ -20,7 +20,7 @@ public class Moto extends Veiculos{
     public void setVolumeBagageiro(int volumeBagageiro) {
         this.volumeBagageiro = volumeBagageiro;
     }
-    
+
     public Moto() {
     }
 
@@ -69,21 +69,34 @@ public class Moto extends Veiculos{
         this.volumeBagageiro = volumeBagageiro;
     }
 
-    
-     public void virarEsquerda() {
+    public int acelerar(int rpm1, int rpmMax) {
+        if(rpm1 < rpmMax){
+            rpm1 += 200;
+        }       
+        return rpm1;
+    }
 
-        System.out.println("Moto " +esquerda);
+    public int desacelerar(int rpm1) {
+        if(rpm1 < 0){
+            rpm1 -=200;
+        }
+        return rpm1;
+    }
+
+    public void virarEsquerda() {
+
+        System.out.println("Moto " + esquerda);
     }
 
     public void virarDireita() {
 
-        System.out.println("Moto " +direita);
+        System.out.println("Moto " + direita);
     }
 
     public void frear() {
-        System.out.println("Moto " +frear);
-    }  
-    
+        System.out.println("Moto " + frear);
+    }
+
     public void cadastrar(int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor, int volumeBagageiro) {
         super.cadastrar(NumeroPassageiros, preco, proprietario, marca, modelo, motor);
         this.volumeBagageiro = volumeBagageiro;

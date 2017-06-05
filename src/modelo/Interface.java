@@ -10,16 +10,12 @@ package modelo;
  * @author DrGreend
  */
 public interface Interface {
+
     static final int tempoMaxUso = 30;
     static final int idadeMinMotorista = 18;
     static final String frear = "Está freiando", direita = "Virando à direita", esquerda = "Virando à esquerda";
-    
+
     public abstract void getTempoMaxUso();
+
     public abstract void getIdadeMinMotorista();
-    
-   /* public abstract void frear();
-    public abstract void virarDireita();
-    public abstract void virarEsquerda();
-    public abstract void entradaDados();*/
-    
 }

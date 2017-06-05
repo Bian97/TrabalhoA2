@@ -53,8 +53,9 @@ public class Motor {
     public void setRpmMaximo(int rpmMaximo) {
         this.rpmMaximo = rpmMaximo;
     }
-    
-    public Motor(){}
+
+    public Motor() {
+    }
 
     public Motor(String marca, String modelo, String tipoCombustivel, int rpm, int rpmMaximo) {
         this.marca = marca;
@@ -63,7 +64,7 @@ public class Motor {
         this.rpm = rpm;
         this.rpmMaximo = rpmMaximo;
     }
-    
+
     public Motor(String marca, String modelo, int rpmMaximo, String tipoCombustivel, int rpm) {
         this.marca = marca;
         this.modelo = modelo;
@@ -71,7 +72,7 @@ public class Motor {
         this.rpm = rpm;
         this.rpmMaximo = rpmMaximo;
     }
-    
+
     public Motor(String marca, int rpmMaximo, String modelo, String tipoCombustivel, int rpm) {
         this.marca = marca;
         this.modelo = modelo;
@@ -79,42 +80,8 @@ public class Motor {
         this.rpm = rpm;
         this.rpmMaximo = rpmMaximo;
     }
-    public Motor(int rpmMaximo,String marca, String modelo, String tipoCombustivel, int rpm) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.tipoCombustivel = tipoCombustivel;
-        this.rpm = rpm;
-        this.rpmMaximo = rpmMaximo;
-    }
-    public Motor(String marca, int rpm, String modelo, int rpmMaximo, String tipoCombustivel) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.tipoCombustivel = tipoCombustivel;
-        this.rpm = rpm;
-        this.rpmMaximo = rpmMaximo;
-    }
-    public Motor(int rpmMaximo,String marca,int rpm, String modelo, String tipoCombustivel) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.tipoCombustivel = tipoCombustivel;
-        this.rpm = rpm;
-        this.rpmMaximo = rpmMaximo;
-    }
-    public Motor(int rpmMaximo, String marca, String tipoCombustivel, int rpm, String modelo) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.tipoCombustivel = tipoCombustivel;
-        this.rpm = rpm;
-        this.rpmMaximo = rpmMaximo;
-    }
-    public Motor(int rpmMaximo, int rpm, String marca, String modelo,  String tipoCombustivel) {
-        this.marca = marca;
-        this.modelo = modelo;
-        this.tipoCombustivel = tipoCombustivel;
-        this.rpm = rpm;
-        this.rpmMaximo = rpmMaximo;
-    }
-    public Motor(String marca, String modelo,int rpm,int rpmMaximo, String tipoCombustivel) {
+
+    public Motor(int rpmMaximo, String marca, String modelo, String tipoCombustivel, int rpm) {
         this.marca = marca;
         this.modelo = modelo;
         this.tipoCombustivel = tipoCombustivel;
@@ -122,15 +89,55 @@ public class Motor {
         this.rpmMaximo = rpmMaximo;
     }
 
-    public void cadastrar(String marca, String modelo, String tipoCombustivel, int rpm, int rpmMaximo){
+    public Motor(String marca, int rpm, String modelo, int rpmMaximo, String tipoCombustivel) {
         this.marca = marca;
         this.modelo = modelo;
         this.tipoCombustivel = tipoCombustivel;
         this.rpm = rpm;
         this.rpmMaximo = rpmMaximo;
     }
-    
-    public void imprimir(){
-        System.out.println("A marca é: "+marca+"\nO modelo é: "+modelo+"\nO tipo de combustível é: "+tipoCombustivel+"\nO RPM é: "+rpm+"\nRPM máximo é: "+rpmMaximo);
+
+    public Motor(int rpmMaximo, String marca, int rpm, String modelo, String tipoCombustivel) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.tipoCombustivel = tipoCombustivel;
+        this.rpm = rpm;
+        this.rpmMaximo = rpmMaximo;
+    }
+
+    public Motor(int rpmMaximo, String marca, String tipoCombustivel, int rpm, String modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.tipoCombustivel = tipoCombustivel;
+        this.rpm = rpm;
+        this.rpmMaximo = rpmMaximo;
+    }
+
+    public Motor(int rpmMaximo, int rpm, String marca, String modelo, String tipoCombustivel) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.tipoCombustivel = tipoCombustivel;
+        this.rpm = rpm;
+        this.rpmMaximo = rpmMaximo;
+    }
+
+    public Motor(String marca, String modelo, int rpm, int rpmMaximo, String tipoCombustivel) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.tipoCombustivel = tipoCombustivel;
+        this.rpm = rpm;
+        this.rpmMaximo = rpmMaximo;
+    }
+
+    public void cadastrar(String marca, String modelo, String tipoCombustivel, int rpm, int rpmMaximo) {
+        this.marca = marca;
+        this.modelo = modelo;
+        this.tipoCombustivel = tipoCombustivel;
+        this.rpm = rpm;
+        this.rpmMaximo = rpmMaximo;
+    }
+
+    public void imprimir() {
+        System.out.println("A marca é: " + marca + "\nO modelo é: " + modelo + "\nO tipo de combustível é: " + tipoCombustivel + "\nO RPM é: " + rpm + "\nRPM máximo é: " + rpmMaximo);
     }
 }

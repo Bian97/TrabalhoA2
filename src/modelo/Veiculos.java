@@ -115,7 +115,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(int NumeroPassageiros, String proprietario, String marca, double preco, String modelo, Motor motor) {
-        this.numeroPassageiros = numeroPassageiros;
+        this.numeroPassageiros = NumeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -123,7 +123,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(int NumeroPassageiros, String modelo, double preco, String proprietario, String marca, Motor motor) {
-        this.numeroPassageiros = numeroPassageiros;
+        this.numeroPassageiros = NumeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -131,7 +131,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(int NumeroPassageiros, String proprietario, String marca, String modelo, double preco, Motor motor) {
-        this.numeroPassageiros = numeroPassageiros;
+        this.numeroPassageiros = NumeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -139,7 +139,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(int NumeroPassageiros, String proprietario, String marca, String modelo, Motor motor, double preco) {
-        this.numeroPassageiros = numeroPassageiros;
+        this.numeroPassageiros = NumeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -147,7 +147,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(double preco, int NumeroPassageiros,String proprietario, String marca, String modelo, Motor motor) {
-        this.numeroPassageiros = numeroPassageiros;
+        this.numeroPassageiros = NumeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -155,7 +155,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(double preco, String proprietario, int NumeroPassageiros, String marca, String modelo, Motor motor) {
-        this.numeroPassageiros = numeroPassageiros;
+        this.numeroPassageiros = NumeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -163,7 +163,7 @@ public abstract class Veiculos implements Interface{
         this.motor = motor;
     }
     public Veiculos(double preco, String proprietario, String marca, String modelo, int NumeroPassageiros, Motor motor) {
-        this.numeroPassageiros = numeroPassageiros;
+        this.numeroPassageiros = NumeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
@@ -172,7 +172,7 @@ public abstract class Veiculos implements Interface{
     }
     
     public void cadastrar(int NumeroPassageiros, double preco, String proprietario, String marca, String modelo, Motor motor){
-        this.numeroPassageiros = numeroPassageiros;
+        this.numeroPassageiros = NumeroPassageiros;
         this.preco = preco;
         this.proprietario = proprietario;
         this.marca = marca;
